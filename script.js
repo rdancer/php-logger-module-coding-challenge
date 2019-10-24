@@ -1,3 +1,7 @@
+/**
+ * Enliven the page using jQuery, events, and async XMLHttpRequests
+ */
+
 "use strict";
 
 (function($){

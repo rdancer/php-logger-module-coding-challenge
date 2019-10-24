@@ -7,10 +7,9 @@
 
 namespace Jan\Minar;
 
-// use Jan\Minar\Logger;
-
 class FileLogger {
-  // use Logger;
+
+  use Logging;
 
   const LOG_PATH = "log/demo.log"; // hard-coded
 
@@ -18,13 +17,13 @@ class FileLogger {
   const LOG_ERR = "error";
   const LOG_WARNING = "warning";
 
-  private $logFile = null;
+  protected $logFile = null;
 
   /**
    *
    * Open the log file in append mode, attempt to create the file anew if it 
    * doesn't exist.
-   * 
+   *
    * Note: Concurrent access is not dealt with, but since we append whole 
    * lines, one at a time, this should not be a problem on Linux.
    */
