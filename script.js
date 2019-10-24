@@ -1,10 +1,12 @@
 "use strict";
 
 (function($){
+  const LOG_PATH = $(document.currentScript).data("log-path");
+
   window.setInterval(updateLogPrintout, 1000);
 
   function updateLogPrintout(){
-    fetch("access.log")
+    fetch(LOG_PATH)
       .then(function(response){
       	return response.text();
       })

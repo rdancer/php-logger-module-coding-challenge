@@ -37,7 +37,7 @@
  </pre>
 </section>
 </body>
-<script src="script.js"></script>
+<script src="script.js" data-log-path="<?php echo FileLogger::LOG_PATH; ?>"></script>
 <?php
   $logger->log(!$_GET["shape"] ? "page loaded" : "");
 ?>
