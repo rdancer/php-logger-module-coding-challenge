@@ -1,0 +1,50 @@
+body {
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+}
+
+[data-shape="square"] {
+  background: orange;
+}
+
+[data-shape="triangle"] {
+  background: red;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+[data-shape="circle"] {
+  background: green;
+  clip-path: circle(50% at 50% 50%);
+}
+
+#shapes {
+  /*margin-left: 3vw;*/
+  /*margin-right: 3vw;*/
+  height: 28.5vh;
+}
+
+.shape {
+  width: 25vw;
+  height: 25vw;
+  display: inline-block;
+  margin-left: 3vw;
+  margin-right: 3vw;
+
+  cursor: pointer;
+  text-align: center;
+  line-height: 25vw;
+  font-size: 3vw;
+}
+
+#log {
+  height: 57vh;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#logText {
+  height: 100%;
+  overflow: scroll;
+}
+  
