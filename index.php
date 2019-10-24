@@ -23,8 +23,7 @@
   <div class="col-lg-4 shape" data-shape="triangle">
     or me
   </div>
-<hr>
-</shapes>
+</section>
 <section id="log">
  <!--h1>Live log</h1-->
  <pre id="logText">
