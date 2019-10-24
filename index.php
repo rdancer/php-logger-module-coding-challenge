@@ -2,6 +2,8 @@
   namespace Jan\Minar;
 
   require_once "autoloader.php";
+
+  $logger = new FileLogger;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,11 +34,10 @@
 <section id="log">
  <!--h1>Live log</h1-->
  <pre id="logText">
-    <?php
-      $logger = new FileLogger;
-      $logger->log("hello, world");
-    ?>
  </pre>
 </section>
 </body>
 <script src="script.js"></script>
+<?php
+  $logger->log(!$_GET["shape"] ? "page loaded" : "");
+?>
