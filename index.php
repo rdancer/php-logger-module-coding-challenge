@@ -1,3 +1,8 @@
+<?php
+  namespace Jan\Minar;
+
+  require_once "autoloader.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +12,7 @@
   <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"-->
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script-->
+  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script-->
   <style>
   </style>
 </head>
@@ -28,21 +33,8 @@
  <!--h1>Live log</h1-->
  <pre id="logText">
     <?php
-      $ip = $_SERVER['REMOTE_ADDR'];
-
-      $referer =  $_SERVER['HTTP_REFERER'];
-      if ($referer == "")
-	$referer = "-";
-
-      $text = htmlspecialchars($_GET["shape"]);
-      if ($text == "")
-	$text = "-";
-      else
-	$text = "\"" . $text . "\"";
-
-      $logFile = fopen("/tmp/access.log", "a") or die("cannot open access.log");
-      fwrite($logFile, $ip . " " . $text . " " . $referer . "\n");
-      fclose($logFile);
+      $logger = new FileLogger;
+      $logger->log("hello, world");
     ?>
  </pre>
 </section>

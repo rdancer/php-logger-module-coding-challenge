@@ -6,23 +6,23 @@
  * simply use new Jan\\Minar\\<ClassName>, without requiring the class source 
  * file first.
  *
+ * The files live in the ./lib subdirectory.
+ *
  * @param class name with the prefix Jan\\Minar
  * @return void
  */
 
- spl_autolod_register(function(string $className) {
-   string $ourPrefix = "Jan\\Minar\\";
-   string $baseDirectory = __DIR__ . "/lib/";
+ spl_autoload_register(function($className) {
+   $ourPrefix = "Jan\\Minar\\";
+   $baseDirectory = __DIR__ . "/lib/";
 
-   string $len = strlen($ourPrefix);
+   $len = strlen($ourPrefix);
    if (substr($className, 0, $len) == $ourPrefix) {
      $className = substr($className, $len);
-     string $filePath = $baseDirectory . str_replace("\\", "/", $className) . ".php";
+     $filePath = $baseDirectory . str_replace("\\", "/", $className) . ".php";
 
      if (file_exists($filePath) && !is_dir($filePath)) {
        require_once $filePath;
      }
    }
  });
-
-
