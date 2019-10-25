@@ -59,7 +59,7 @@ case "triangle": // red
     $logger->error("CODE RED, I guess this is a Bermuda triangle");
     break;
 case "square": // orange
-    $logger->error("Code amber, do not be a square");
+    $logger->warn("Orange you glad it's hip to be square?");
     break;
 case "circle": // green
     $fortuneCookieMessage = shell_exec("/usr/games/fortune -n 80"); // select from fortune cookies no longer than 80 characters

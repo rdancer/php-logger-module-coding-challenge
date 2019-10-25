@@ -66,7 +66,7 @@ class FileLogger implements Logging
      *
      * @return void
      */
-    public function log($message, $severity = self::LOG_INFO) 
+    public function log($message, $severity = self::LOG_INFO) : void
     {
         $isoTime = (new \DateTime())->format(\DateTime::ATOM);
 

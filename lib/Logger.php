@@ -33,7 +33,7 @@ trait Logger
      *
      * @return void
      */
-    public function warn($message) 
+    public function warn($message) : void
     {
         $this->log($message, self::LOG_WARNING);
     }
@@ -45,7 +45,7 @@ trait Logger
      *
      * @return void
      */
-    public function error($message) 
+    public function error($message) : void
     {
         $this->log($message, self::LOG_ERR);
     }
