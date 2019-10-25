@@ -12,7 +12,7 @@ For a live demo, see [my server](https://www.flatwalls.co.uk/php-logger-module-c
 The modules are autoloaded using a custom function (an alternative would be to use *composer*). The code assumes to be running 
 on Linux, on PHP 7.1. The only external library it uses is jQuery.
 
-The code is written to [PSR12](https://www.php-fig.org/psr/psr-12/) coding standard, and has been successfully run through a a [linter/beautifier](http://blog.programster.org/getting-started-with-php-codesniffer); it follows the [PSR4](https://www.php-fig.org/psr/psr-4/) autoloading specification (`composer` is not used).
+The code is written to [PSR12](https://www.php-fig.org/psr/psr-12/) coding standard, and has been successfully run through a [linter/beautifier](http://blog.programster.org/getting-started-with-php-codesniffer); it follows the [PSR4](https://www.php-fig.org/psr/psr-4/) autoloading specification (`composer` is not used).
 
 Using the `Logger` interface is very simple: `(new FileLogger()).log($message[, "warn|error")`; it is also possible to use two convenience methods, `warn()` and `error()`, which are aliases for `log(..., "warn")` and `log(..., "error")` respectively.
 
