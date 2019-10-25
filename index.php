@@ -70,4 +70,5 @@
             break;
     }
 ?>
-// vim: sts=4:ts=8:sw=4
+<!-- vim: sts=4:ts=8:sw=4
+  -->

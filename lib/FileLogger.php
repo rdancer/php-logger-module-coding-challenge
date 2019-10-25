@@ -14,7 +14,7 @@ class FileLogger implements Logging
 {
     use Logger;
 
-    const LOG_PATH = "/tmp/janminar-demo.log"; // hard-coded
+    const LOG_PATH = "log/janminar-demo.log"; // hard-coded
 
     private $logFile = null;
 
