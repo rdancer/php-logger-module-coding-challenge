@@ -4,7 +4,18 @@ Specifies a `Logger` trait and implements it in a `FileLogger` class.
 
 For a live demo, see [my server](https://www.flatwalls.co.uk/reciteme-coding-challenge/).
 
-It implements a
+<!-- put a screenshot here -->
+
+
+## Implementation
+
+The modules are autoloaded using a custom function (an alternative would be to use *composer*). The code assumes to be running 
+on Linux, on PHP 7.1. The only external library it uses is jQuery.
+
+The code has been successfully run through a *PSR12* linter, and uses *PSR4* autoloading.
+
+Using the `Logger` interface is very simple: `(new FileLogger()).log($message[, "warn|error")`; it is also possible to use two convenience methods, `warn()` and `error()`, which are aliases for `log(..., "warn")` and `log(..., "error")` respectively.
+
 ## Installation
 
 1. Clone the repository somewhere accessible by your web server, and point a browser to its root.
@@ -31,15 +42,6 @@ shouldn't, have access there.
 | `LICENSE`           | text of the MIT license; this code is free to use                                                                           |
 | `autoloader.php`    | module autoloading                                                                                                          |
 | `index.php`         | the main page; open it in a browser                                                                                         |
-
-## Implementation
-
-The modules are autoloaded using a custom function (an alternative would be to use *composer*). The code assumes to be running 
-on Linux, on PHP 7.1. The only external library it uses is jQuery.
-
-The code has been successfully run through a *PSR12* linter, and uses *PSR4* autoloading.
-
-Using the `Logger` interface is very simple: `(new FileLogger()).log($message[, "warn|error")`; it is also possible to use two convenience methods, `warn()` and `error()`, which are aliases for `log(..., "warn")` and `log(..., "error")` respectively.
 
 ### Examples
 
