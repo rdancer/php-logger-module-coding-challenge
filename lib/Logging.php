@@ -3,10 +3,10 @@
  * Specifies the Logging interface
  *
  * @category ToolsAndUtilities
- * @package  RecitemeCodingChallenge
+ * @package  CodingChallenge
  * @author   Jan Minar <rdancer@rdancer.org>
- * @license  https://github.com/rdancer/reciteme-coding-challenge/blob/master/LICENSE MIT
- * @link     https://www.flatwalls.co.uk/reciteme-coding-challenge
+ * @license  https://github.com/rdancer/php-logger-module-coding-challenge/blob/master/LICENSE MIT
+ * @link     https://www.flatwalls.co.uk/php-logger-module-coding-challenge
  */
 
 // breaks php 5
@@ -18,10 +18,10 @@ namespace JanMinar\CodingChallenge;
  * Specifies the Logging interface
  *
  * @category ToolsAndUtilities
- * @package  RecitemeCodingChallenge
+ * @package  CodingChallenge
  * @author   Jan Minar <rdancer@rdancer.org>
- * @license  https://github.com/rdancer/reciteme-coding-challenge/blob/master/LICENSE MIT
- * @link     https://www.flatwalls.co.uk/reciteme-coding-challenge
+ * @license  https://github.com/rdancer/php-logger-module-coding-challenge/blob/master/LICENSE MIT
+ * @link     https://www.flatwalls.co.uk/php-logger-module-coding-challenge
  */
 interface Logging
 {

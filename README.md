@@ -2,7 +2,7 @@
 
 Specifies a `Logging` interface, and implements it in a `FileLogger` class, using a `Logger` trait.
 
-For a live demo, see [my server](https://www.flatwalls.co.uk/reciteme-coding-challenge/).
+For a live demo, see [my server](https://www.flatwalls.co.uk/php-logger-module-coding-challenge/).
 
 ![Screenshot of the Demo](Screenshot%202019-10-25%20at%2004.45.30.png)
 

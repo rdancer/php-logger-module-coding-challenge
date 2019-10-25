@@ -13,10 +13,10 @@
  * @return void
  *
  * @category ToolsAndUtilities
- * @package  RecitemeCodingChallenge
+ * @package  CodingChallenge
  * @author   Jan Minar <rdancer@rdancer.org>
- * @license  https://github.com/rdancer/reciteme-coding-challenge/blob/master/LICENSE MIT
- * @link     https://www.flatwalls.co.uk/reciteme-coding-challenge
+ * @license  https://github.com/rdancer/php-logger-module-coding-challenge/blob/master/LICENSE MIT
+ * @link     https://www.flatwalls.co.uk/php-logger-module-coding-challenge
  */
 
 // breaks php 5

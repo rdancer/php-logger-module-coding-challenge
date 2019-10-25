@@ -9,10 +9,10 @@
  * followed by an optional freeform message (which may contain any characters, including SPACE).
  *
  * @category ToolsAndUtilities
- * @package  RecitemeCodingChallenge
+ * @package  CodingChallenge
  * @author   Jan Minar <rdancer@rdancer.org>
- * @license  https://github.com/rdancer/reciteme-coding-challenge/blob/master/LICENSE MIT
- * @link     https://www.flatwalls.co.uk/reciteme-coding-challenge
+ * @license  https://github.com/rdancer/php-logger-module-coding-challenge/blob/master/LICENSE MIT
+ * @link     https://www.flatwalls.co.uk/php-logger-module-coding-challenge
  */
 
 // breaks php 5
@@ -24,10 +24,10 @@ namespace JanMinar\CodingChallenge;
  * Logs are appended to LOG_PATH, which is created if it doesn't exist.
  *
  * @category ToolsAndUtilities
- * @package  RecitemeCodingChallenge
+ * @package  CodingChallenge
  * @author   Jan Minar <rdancer@rdancer.org>
- * @license  https://github.com/rdancer/reciteme-coding-challenge/blob/master/LICENSE MIT
- * @link     https://www.flatwalls.co.uk/reciteme-coding-challenge
+ * @license  https://github.com/rdancer/php-logger-module-coding-challenge/blob/master/LICENSE MIT
+ * @link     https://www.flatwalls.co.uk/php-logger-module-coding-challenge
  */
 class FileLogger implements Logging
 {

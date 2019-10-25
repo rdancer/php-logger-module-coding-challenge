@@ -5,10 +5,10 @@
      * See README for details.
      *
      * @category ToolsAndUtilities
-     * @package  RecitemeCodingChallenge
+     * @package  CodingChallenge
      * @author   Jan Minar <rdancer@rdancer.org>
-     * @license  https://github.com/rdancer/reciteme-coding-challenge/blob/master/LICENSE MIT
-     * @link     https://www.flatwalls.co.uk/reciteme-coding-challenge
+     * @license  https://github.com/rdancer/php-logger-module-coding-challenge/blob/master/LICENSE MIT
+     * @link     https://www.flatwalls.co.uk/php-logger-module-coding-challenge
      */
 
     // breaks php 5
@@ -23,7 +23,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Jan Minar - Coding Challenge - Reciteme.com - 2019-10-24</title>
+  <title>Jan Minar - Coding Challenge - 2019-10-24</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"-->
