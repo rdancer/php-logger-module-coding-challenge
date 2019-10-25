@@ -1,6 +1,6 @@
 # Coding challenge solution for a potential employer
 
-Specifies a `Logger` trait and implements it in a `FileLogger` class.
+Specifies a `Logging` interface, and implements it in a `FileLogger` class, using a `Logger` trait.
 
 For a live demo, see [my server](https://www.flatwalls.co.uk/reciteme-coding-challenge/).
 
