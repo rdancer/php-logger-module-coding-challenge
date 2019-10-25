@@ -45,13 +45,13 @@ Using the `Logger` interface is very simple: `(new FileLogger()).log($message[, 
 
 ```$logger = new FileLogger();
 
-// [info] 2019-10-25T02:30:29+00:00 90.249.126.58 - http://flatwalls.co.uk/reciteme-coding-challenge/ Hello, world!
+// [info] 2019-10-25T02:30:29+00:00 90.249.126.58 - http://example.com/ Hello, world!
 $logger.log("Hello, world");
 
-// [warning] 2019-10-25T04:02:40+00:00 90.249.126.58 - http://flatwalls.co.uk/reciteme-coding-challenge/ This is a warning
+// [warning] 2019-10-25T04:02:40+00:00 90.249.126.58 - http://example.com This is a warning
 $logger.log("This is a warning", Logging::LOG_WARNING)
 
-// [error] 2019-10-25T04:02:05+00:00 90.249.126.58 - http://flatwalls.co.u k/reciteme-coding-challenge/ That's all we know!
+// [error] 2019-10-25T04:02:05+00:00 90.249.126.58 - http://example.com/ That's all we know!
 $logger.error("That's all we know!");
 
 ## Troubleshooting
