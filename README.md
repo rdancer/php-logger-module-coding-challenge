@@ -35,9 +35,9 @@ shouldn't, have access there.
 | file name           | note                                                                                                                      |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------|
 | `lib/`              | The logger module itself                                                                                                  |
-| `   FileLogger.php` | Implements the `Logging` interface, and uses the `Logger` trait                                                           |
-| `   Logger.php`     | The `Logger` trait; the assignment asked for a trait, but this should perhaps more straightforwardly been a parent class. |
-| `   Logging.php`    | Specifies the interface `FileLogger` implements                                                                           |
+| `lib/FileLogger.php`| Implements the `Logging` interface, and uses the `Logger` trait                                                           |
+| `lib/Logger.php`    | The `Logger` trait; the assignment asked for a trait, but this should perhaps more straightforwardly been a parent class. |
+| `lib/Logging.php`   | Specifies the interface `FileLogger` implements                                                                           |
 | `log/`              | Log files will be written here -- this directory needs to be writable by the web server process                           |
 | `LICENSE`           | text of the MIT license; this code is free to use                                                                         |
 | `autoloader.php`    | module autoloading                                                                                                        |
