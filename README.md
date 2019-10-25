@@ -20,7 +20,8 @@ Using the `Logger` interface is very simple: `(new FileLogger()).log($message[, 
 
 1. Clone the repository somewhere accessible by your web server, and point a browser to its root.
 2. Ensure the `log` directory in the root of the repository is writeable by the
-   web server (`chgrp www-data log && chmod g+w log` on Debian-based systems).
+   web server (`chgrp www-data log && chmod g+w log` on Debian-based systems; ideally, we should
+   implement this in a *composer* install script).
 
 ## Operation
 
