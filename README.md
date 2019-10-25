@@ -4,8 +4,7 @@ Specifies a `Logging` interface, and implements it in a `FileLogger` class, usin
 
 For a live demo, see [my server](https://www.flatwalls.co.uk/php-logger-module-coding-challenge/).
 
-![Screenshot of the Demo](Screenshot%202019-10-25%20at%2011.48.52.png)
-
+![Animated GIF of the Demo](ezgif-1-1208cd511400.gif)
 
 ## Implementation
 
