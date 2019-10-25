@@ -10,8 +10,8 @@
 
 namespace JanMinar\CodingChallenge;
 
-class FileLogger implements Logging {
-
+class FileLogger implements Logging
+{
     use Logger;
 
     const LOG_PATH = "log/demo.log"; // hard-coded
@@ -50,7 +50,6 @@ class FileLogger implements Logging {
 
         fwrite($this->logFile, "[" . $severity . "] " . $isoTime . " " . $ip . " " . $shape . " " . $referer . " " . $message . PHP_EOL);
     }
-
 }
 
 // vim: sts=4:ts=8:sw=4

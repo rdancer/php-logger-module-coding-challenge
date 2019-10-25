@@ -1,4 +1,10 @@
 <?php
+    /**
+     * Front page of the demo.
+     *
+     * See README for details.
+     */
+
     // breaks php 5
     //declare(strict_types=1);
 
@@ -6,7 +12,7 @@
 
     require_once "autoloader.php";
 
-    $logger = new FileLogger;
+    $logger = new FileLogger();
 ?>
 <!DOCTYPE html>
 <html lang="en">
