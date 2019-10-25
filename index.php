@@ -3,6 +3,12 @@
      * Front page of the demo.
      *
      * See README for details.
+     *
+     * @category ToolsAndUtilities
+     * @package  RecitemeCodingChallenge
+     * @author   Jan Minar <rdancer@rdancer.org>
+     * @license  https://github.com/rdancer/reciteme-coding-challenge/blob/master/LICENSE MIT
+     * @link     https://www.flatwalls.co.uk/reciteme-coding-challenge
      */
 
     // breaks php 5
@@ -49,25 +55,25 @@
 <script src="script.js" data-log-path="<?php echo FileLogger::LOG_PATH; ?>"></script>
 <?php
     switch($_GET["shape"]) {
-        case "triangle": // red
-            $logger->error("CODE RED, I guess this is a Bermuda triangle");
-            break;
-        case "square": // orange
-            $logger->error("Code amber, do not be a square");
-            break;
-        case "circle": // green
-            $fortuneCookieMessage = shell_exec("/usr/games/fortune -n 80"); // select from fortune cookies no longer than 80 characters
+case "triangle": // red
+    $logger->error("CODE RED, I guess this is a Bermuda triangle");
+    break;
+case "square": // orange
+    $logger->error("Code amber, do not be a square");
+    break;
+case "circle": // green
+    $fortuneCookieMessage = shell_exec("/usr/games/fortune -n 80"); // select from fortune cookies no longer than 80 characters
 
-            // Make the cookie fit nicely on one line
-            $fortuneCookieMessage = str_replace(array("\r\n", "\r", "\n"), " ", $fortuneCookieMessage);
-            $fortuneCookieMessage = preg_replace("/(\t| )+/", " ", $fortuneCookieMessage);
-            $fortuneCookieMessage = preg_replace("/^ | $/", "", $fortuneCookieMessage);
+    // Make the cookie fit nicely on one line
+    $fortuneCookieMessage = str_replace(array("\r\n", "\r", "\n"), " ", $fortuneCookieMessage);
+    $fortuneCookieMessage = preg_replace("/(\t| )+/", " ", $fortuneCookieMessage);
+    $fortuneCookieMessage = preg_replace("/^ | $/", "", $fortuneCookieMessage);
 
-            $logger->log($fortuneCookieMessage);
-            break;
-        default:
-            $logger->log("page loaded");
-            break;
+    $logger->log($fortuneCookieMessage);
+    break;
+default:
+    $logger->log("page loaded");
+    break;
     }
 ?>
 <!-- vim: sts=4:ts=8:sw=4

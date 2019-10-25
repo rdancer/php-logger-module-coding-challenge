@@ -1,6 +1,12 @@
 <?php
 /**
  * Defines the Logger trait
+ *
+ * @category ToolsAndUtilities
+ * @package  RecitemeCodingChallenge
+ * @author   Jan Minar <rdancer@rdancer.org>
+ * @license  https://github.com/rdancer/reciteme-coding-challenge/blob/master/LICENSE MIT
+ * @link     https://www.flatwalls.co.uk/reciteme-coding-challenge
  */
 
 // breaks php 5
@@ -8,13 +14,39 @@
 
 namespace JanMinar\CodingChallenge;
 
-trait Logger {
+/**
+ * Defines the Logger trait
+ *
+ * @category ToolsAndUtilities
+ * @package  RecitemeCodingChallenge
+ * @author   Jan Minar <rdancer@rdancer.org>
+ * @license  https://github.com/rdancer/reciteme-coding-challenge/blob/master/LICENSE MIT
+ * @link     https://www.flatwalls.co.uk/reciteme-coding-challenge
+ */
+trait Logger
+{
 
-    public function warn($message) {
+    /**
+     * Convenience wrapper for $this->log(), setting $severity to "warn"
+     *
+     * @param string $message The message we want to log -- this is a freeform string
+     *
+     * @return void
+     */
+    public function warn($message) 
+    {
         $this->log($message, self::LOG_WARNING);
     }
 
-    public function error($message) {
+    /**
+     * Convenience wrapper for $this->log(), setting $severity to "error"
+     *
+     * @param string $message The message we want to log -- this is a freeform string
+     *
+     * @return void
+     */
+    public function error($message) 
+    {
         $this->log($message, self::LOG_ERR);
     }
 
