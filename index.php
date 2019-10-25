@@ -1,5 +1,5 @@
 <?php
-  namespace Jan\Minar;
+  namespace JanMinar\CodingChallenge;
 
   require_once "autoloader.php";
 

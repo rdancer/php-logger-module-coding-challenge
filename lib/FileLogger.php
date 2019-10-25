@@ -5,7 +5,7 @@
  * Logs are appended to /tmp/access.log, which is created if it doesn't exist.
  */
 
-namespace Jan\Minar;
+namespace JanMinar\CodingChallenge;
 
 class FileLogger {
 

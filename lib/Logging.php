@@ -3,7 +3,7 @@
  * Defines the Logging trait
  */
 
-namespace Jan\Minar;
+namespace JanMinar\CodingChallenge;
 
 trait Logging {
 
