@@ -2,20 +2,18 @@
 /**
  * Implements the Logger trait.
  *
- * Logs are appended to /tmp/access.log, which is created if it doesn't exist.
+ * Logs are appended to LOG_PATH, which is created if it doesn't exist.
  */
+
+declare(strict_types=1);
 
 namespace JanMinar\CodingChallenge;
 
-class FileLogger {
+class FileLogger implements Logging {
 
-  use Logging;
+  use Logger;
 
   const LOG_PATH = "log/demo.log"; // hard-coded
-
-  const LOG_INFO = "info";
-  const LOG_ERR = "error";
-  const LOG_WARNING = "warning";
 
   private $logFile = null;
 

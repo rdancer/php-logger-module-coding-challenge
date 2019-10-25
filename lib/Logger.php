@@ -1,11 +1,13 @@
 <?php
 /**
- * Defines the Logging trait
+ * Defines the Logger trait
  */
+
+declare(strict_types=1);
 
 namespace JanMinar\CodingChallenge;
 
-trait Logging {
+trait Logger {
 
   public function warn($message) {
     $this->log($message, self::LOG_WARNING);

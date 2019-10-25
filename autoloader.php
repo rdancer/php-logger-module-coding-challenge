@@ -12,6 +12,8 @@
  * @return void
  */
 
+declare(strict_types=1);
+
  spl_autoload_register(function($className) {
    $ourPrefix = "JanMinar\\CodingChallenge\\";
    $baseDirectory = __DIR__ . "/lib/";
