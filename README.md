@@ -45,6 +45,9 @@ Using the `Logger` interface is very simple: `(new FileLogger()).log($message[, 
 
 ```$logger = new FileLogger();
 
+// The format is:
+// <severity> <time_stamp> - <referrer> Freeform log message
+
 // [info] 2019-10-25T02:30:29+00:00 90.249.126.58 - http://example.com/ Hello, world!
 $logger.log("Hello, world");
 
@@ -53,6 +56,7 @@ $logger.log("This is a warning", Logging::LOG_WARNING)
 
 // [error] 2019-10-25T04:02:05+00:00 90.249.126.58 - http://example.com/ That's all we know!
 $logger.error("That's all we know!");
+```
 
 ## Troubleshooting
 
