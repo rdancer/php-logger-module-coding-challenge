@@ -1,68 +1,71 @@
 body {
-  margin: 15px;
+    margin: 15px;
 
-  background: #b2cefe;
-  display: flex;
-  flex-direction: column;
+    background: #b2cefe;
+    display: flex;
+    flex-direction: column;
 }
 
 #shapes {
-  /*margin-left: 3vw;*/
-  /*margin-right: 3vw;*/
-  height: calc( 33vh - 30px);
-  display: flex;
-  justify-content: space-evenly;
+    /*margin-left: 3vw;*/
+    /*margin-right: 3vw;*/
+    height: calc( 33vh - 30px);
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .shape {
-  width: 25vh;
-  height: 25vh;
-  display: inline-block;
-  margin-left: 3vw;
-  margin-right: 3vw;
+    width: 25vh;
+    height: 25vh;
+    display: inline-block;
+    margin-left: 3vw;
+    margin-right: 3vw;
 
-  cursor: pointer;
-  text-align: center;
-  line-height: 25vh;
-  font-size: 3vw;
+    cursor: pointer;
+    text-align: center;
+    line-height: 25vh;
+    font-size: 3vw;
 }
 .shape:active {
-  transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
 }
 
 [data-shape="square"] {
-  background: /*orange*/ #f8b88b;
+    background: /*orange*/ #f8b88b;
 }
 [data-shape="square"]:hover {
-  background: orange;
+    background: orange;
 }
 
 [data-shape="triangle"] {
-  background: /*red*/ #fea3aa;
-  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    background: /*red*/ #fea3aa;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
 }
 [data-shape="triangle"]:hover {
-  background: red;
-  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    background: red;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
 }
 
 [data-shape="circle"] {
-  background: /*green*/ #baed91;
-  clip-path: circle(50% at 50% 50%);
+    background: /*green*/ #baed91;
+    clip-path: circle(50% at 50% 50%);
 }
 [data-shape="circle"]:hover {
-  background: green;
-  clip-path: circle(50% at 50% 50%);
+    background: green;
+    clip-path: circle(50% at 50% 50%);
 }
 
 #log {
-  height: calc( 70vh - 20px);
-  background: rgba(0, 0, 0, 0.3);
+    height: calc( 70vh - 20px);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 #logText {
-  height: calc(100% - 30px);
-  padding: 0 15px;
-  overflow: scroll;
+    height: calc(100% - 30px);
+    padding: 0 15px;
+    overflow: scroll;
 }
-  
+    
+/*
+ * vim: sts=4:ts=8:sw=4
+ */

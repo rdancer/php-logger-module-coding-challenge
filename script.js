@@ -5,30 +5,31 @@
 "use strict";
 
 (function($){
-  const LOG_PATH = $(document.currentScript).data("log-path");
+    const LOG_PATH = $(document.currentScript).data("log-path");
 
-  window.setInterval(updateLogPrintout, 1000);
+    window.setInterval(updateLogPrintout, 1000);
 
-  function updateLogPrintout(){
-    fetch(LOG_PATH)
-      .then(function(response){
-      	return response.text();
-      })
-      .then(function(logText){
-      	updateLogText(logText);
-      });
-  }
+    function updateLogPrintout(){
+        fetch(LOG_PATH)
+            .then(function(response){
+                return response.text();
+            })
+            .then(function(logText){
+                updateLogText(logText);
+            });
+    }
 
-  function updateLogText(rawLogText) {
-    let lines = rawLogText.match(/^.*((\r\n|\n|\r)|$)/gm);
-    lines.reverse();
-    lines = lines.map(x => x.replace(/(.{78})/g, "$1\n  "));
-    let s = lines.join("");
-    $("#logText").text(s);
-  }
+    function updateLogText(rawLogText) {
+        let lines = rawLogText.match(/^.*((\r\n|\n|\r)|$)/gm);
+        lines.reverse();
+        lines = lines.map(x => x.replace(/(.{78})/g, "$1\n  "));
+        let s = lines.join("");
+        $("#logText").text(s);
+    }
 
-  $(".shape").click(function(){
-    let shapeId = $(this).data("shape");
-    fetch(`?shape=${shapeId}`);
-  });
+    $(".shape").click(function(){
+        let shapeId = $(this).data("shape");
+        fetch(`?shape=${shapeId}`);
+    });
 })(jQuery);
+// vim: sts=4:ts=8:sw=4

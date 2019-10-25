@@ -12,19 +12,21 @@
  * @return void
  */
 
-declare(strict_types=1);
+// breaks php 5
+//declare(strict_types=1);
 
  spl_autoload_register(function($className) {
-   $ourPrefix = "JanMinar\\CodingChallenge\\";
-   $baseDirectory = __DIR__ . "/lib/";
+     $ourPrefix = "JanMinar\\CodingChallenge\\";
+     $baseDirectory = __DIR__ . "/lib/";
 
-   $len = strlen($ourPrefix);
-   if (substr($className, 0, $len) == $ourPrefix) {
-     $className = substr($className, $len);
-     $filePath = $baseDirectory . str_replace("\\", "/", $className) . ".php";
+     $len = strlen($ourPrefix);
+     if (substr($className, 0, $len) == $ourPrefix) {
+         $className = substr($className, $len);
+         $filePath = $baseDirectory . str_replace("\\", "/", $className) . ".php";
 
-     if (file_exists($filePath) && !is_dir($filePath)) {
-       require_once $filePath;
+         if (file_exists($filePath) && !is_dir($filePath)) {
+             require_once $filePath;
+         }
      }
-   }
  });
+// vim: sts=4:ts=8:sw=4
