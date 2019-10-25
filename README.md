@@ -4,7 +4,7 @@ Specifies a `Logger` trait and implements it in a `FileLogger` class.
 
 For a live demo, see [my server](https://www.flatwalls.co.uk/reciteme-coding-challenge/).
 
-<!-- put a screenshot here -->
+![Screenshot of the Demo](Screenshot%202019-10-25%20at%2004.45.30.png)
 
 
 ## Implementation
