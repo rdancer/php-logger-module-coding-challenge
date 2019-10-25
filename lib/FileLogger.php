@@ -17,7 +17,7 @@ class FileLogger {
   const LOG_ERR = "error";
   const LOG_WARNING = "warning";
 
-  protected $logFile = null;
+  private $logFile = null;
 
   /**
    *
@@ -52,12 +52,5 @@ class FileLogger {
     fwrite($this->logFile, "[" . $severity . "] " . $isoTime . " " . $ip . " " . $shape . " " . $referer . " " . $message . PHP_EOL);
   }
 
-  public function warn($message) {
-    $this->log($message, self::LOG_WARNING);
-  }
-
-  public function error($message) {
-    $this->log($message, self::LOG_ERR);
-  }
 }
 

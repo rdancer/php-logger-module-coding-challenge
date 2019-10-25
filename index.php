@@ -39,5 +39,25 @@
 </body>
 <script src="script.js" data-log-path="<?php echo FileLogger::LOG_PATH; ?>"></script>
 <?php
-  $logger->log(!$_GET["shape"] ? "page loaded" : "");
+  switch($_GET["shape"]) {
+    case "triangle": // red
+      $logger->error("CODE RED, I guess this is a Bermuda triangle");
+      break;
+    case "square": // orange
+      $logger->error("Code amber, do not be a square");
+      break;
+    case "circle": // green
+      $fortuneCookieMessage = shell_exec("/usr/games/fortune -n 80"); // select from fortune cookies no longer than 80 characters
+
+      // Make the cookie fit nicely on one line
+      $fortuneCookieMessage = str_replace(array("\r\n", "\r", "\n"), " ", $fortuneCookieMessage);
+      $fortuneCookieMessage = preg_replace("/(\t| )+/", " ", $fortuneCookieMessage);
+      $fortuneCookieMessage = preg_replace("/^ | $/", "", $fortuneCookieMessage);
+
+      $logger->log($fortuneCookieMessage);
+      break;
+    default:
+      $logger->log("page loaded");
+      break;
+  }
 ?>
