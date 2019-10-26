@@ -49,7 +49,6 @@ trait Logger
     {
         $this->log($message, self::LOG_ERR);
     }
-
 }
 
 // vim: sts=4:ts=8:sw=4

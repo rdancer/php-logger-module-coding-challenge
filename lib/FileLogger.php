@@ -5,7 +5,7 @@
  * The file format is similar to the Apache `access.log`, with SPACE-separated entries for the following fixed columns:
  *
  *     [severity] timestamp source_IP_address "circle|triangle|square" referrer
- * 
+ *
  * followed by an optional freeform message (which may contain any characters, including SPACE).
  *
  * @category ToolsAndUtilities
@@ -38,13 +38,13 @@ class FileLogger implements Logging
     private $__logFile = null;
 
     /**
-     * Open the log file in append mode, attempt to create the file anew if it 
+     * Open the log file in append mode, attempt to create the file anew if it
      * doesn't exist.
      *
-     * Note: Concurrent access is not dealt with, but since we append whole 
+     * Note: Concurrent access is not dealt with, but since we append whole
      * lines, one at a time, this should not be a problem on Linux.
      */
-    function __construct() 
+    public function __construct()
     {
         $this->__logFile = fopen(self::LOG_PATH, "a") or die("cannot open " . self::LOG_PATH);
     }
@@ -53,7 +53,7 @@ class FileLogger implements Logging
      *
      * @return void
      */
-    function __destruct() 
+    public function __destruct()
     {
         fclose($this->__logFile);
     }
