@@ -75,6 +75,6 @@ default:
     $logger->log("page loaded");
     break;
     }
-?>
+    ?>
 <!-- vim: sts=4:ts=8:sw=4
   -->
