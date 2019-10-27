@@ -23,8 +23,17 @@ namespace JanMinar\CodingChallenge;
  * @license  https://github.com/rdancer/php-logger-module-coding-challenge/blob/master/LICENSE MIT
  * @link     https://www.flatwalls.co.uk/php-logger-module-coding-challenge
  */
-trait Logger
+trait Logger /* implements Logging */
 {
+    /**
+     * Do the actual logging -- to be implemented by the using class
+     *
+     * @param string $message  The message we want to log -- this is a freeform string
+     * @param string $severity one of "warn", "error", or "info"; use the LOG_* constants
+     *
+     * @return void
+     */
+    abstract public function log($message, $severity) : void;
 
     /**
      * Convenience wrapper for $this->log(), setting $severity to "warn"
