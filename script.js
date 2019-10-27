@@ -29,7 +29,8 @@
 
     $(".shape").click(function(){
         let shapeId = $(this).data("shape");
-        fetch(`?shape=${shapeId}`);
+        fetch(`?shape=${shapeId}`)
+        .then(updateLogPrintout);
     });
 })(jQuery);
 // vim: sts=4:ts=8:sw=4
