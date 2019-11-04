@@ -45,18 +45,20 @@ switch ($_GET["shape"]) {
  */
 function getFortuneCookie($maxLength = 80): string
 {
+    $maxLength *= 1; // sanitize
+
     if ($maxLength < 1) {
         return null;
     }
 
-    $s = shell_exec("/usr/games/fortune -n" . $maxLength);
+    $s = shell_exec("/usr/games/fortune -n" . /* already sanitized, but what the heck */ escapeshellarg($maxLength));
 
     // Make the cookie fit nicely on one line
-    $s = str_replace(array("\r\n", "\r", "\n"), " ", $fortuneCookieMessage);
-    $s = preg_replace("/(\t| )+/", " ", $fortuneCookieMessage);
-    $s = preg_replace("/^ | $/", "", $fortuneCookieMessage);
+    $s = str_replace(array("\r\n", "\r", "\n"), " ", $s);
+    $s = preg_replace("/(\t| )+/", " ", $s);
+    $s = preg_replace("/^ | $/", "", $s);
 
-    return s;
+    return $s;
 }
 
 ?>
