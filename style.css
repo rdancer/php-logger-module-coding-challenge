@@ -15,30 +15,17 @@ body {
 }
 
 .shape {
-    width: 25vh;
-    height: 25vh;
+    width: 25vmin;
+    height: 25vmin;
     display: inline-block;
     margin-left: 3vw;
     margin-right: 3vw;
 
     cursor: pointer;
     text-align: center;
-    line-height: 25vh;
-    font-size: 3vh;
+    line-height: 25vmin;
+    font-size: 3vmin;
 }
-
-/* Handle portrait mode */
-@media screen and (max-width: 1300px) and (min-height:1200px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
-@media screen and (max-width: 1200px) and (min-height:1100px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
-@media screen and (max-width: 1100px) and (min-height:1000px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
-@media screen and (max-width: 1000px) and (min-height: 900px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
-@media screen and (max-width:  900px) and (min-height: 800px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
-@media screen and (max-width:  800px) and (min-height: 700px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
-@media screen and (max-width:  700px) and (min-height: 600px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
-@media screen and (max-width:  600px) and (min-height: 500px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
-@media screen and (max-width:  500px) and (min-height: 400px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
-@media screen and (max-width:  400px) and (min-height: 300px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
-@media screen and (max-width:  300px) and (min-height: 200px ) { .shape { width: 25vw; height: 25vw; line-height: 25vw; font-size: 3vw } }
 
 /* clickable button visual feedback - depress the whole shape when clicked/tapped */
 .shape:active {
@@ -58,7 +45,6 @@ body {
 }
 [data-shape="triangle"]:hover {
     background: red;
-    clip-path: polygon(0 100%, 50% 0, 100% 100%);
 }
 
 [data-shape="circle"] {
@@ -67,7 +53,6 @@ body {
 }
 [data-shape="circle"]:hover {
     background: green;
-    clip-path: circle(50% at 50% 50%);
 }
 
 #log {
